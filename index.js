@@ -34,11 +34,9 @@ const checkUser = (applicableRoles) => {
             if(userRole==role){
                 return next();
             }
-            else{
-                return res.status(403).json({
-                    msg:"Don't have access to this route"
-                })
-            }
+        }) 
+        return res.status(403).json({
+            msg:"Don't have access to this route"
         })   
     }
 }
